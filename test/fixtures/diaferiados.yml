@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  dectription: MyText
+  fecha: MyString
+
+two:
+  dectription: MyText
+  fecha: MyString

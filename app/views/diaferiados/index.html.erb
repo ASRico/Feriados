@@ -1,0 +1,25 @@
+<h1>Listing diaferiados</h1>
+
+<table>
+  <tr>
+    <th>Dectription</th>
+    <th>Fecha</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @diaferiados.each do |diaferiado| %>
+  <tr>
+    <td><%= diaferiado.dectription %></td>
+    <td><%= diaferiado.fecha %></td>
+    <td><%= link_to 'Show', diaferiado %></td>
+    <td><%= link_to 'Edit', edit_diaferiado_path(diaferiado) %></td>
+    <td><%= link_to 'Destroy', diaferiado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Diaferiado', new_diaferiado_path %>

@@ -1,0 +1,25 @@
+<%= form_for(@diaferiado) do |f| %>
+  <% if @diaferiado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@diaferiado.errors.count, "error") %> prohibited this diaferiado from being saved:</h2>
+
+      <ul>
+      <% @diaferiado.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dectription %><br />
+    <%= f.text_area :dectription %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.text_field :fecha %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
