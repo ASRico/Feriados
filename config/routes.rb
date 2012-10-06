@@ -5,6 +5,7 @@ Feria::Application.routes.draw do
 
   resources :diaferiados
 
+  #match 'clientes' => "clientes#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -54,7 +55,11 @@ Feria::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'clientes#index'
+  match "/login" => "users#sign_in", :as => :login
+  match "/clientes" => "clientes#index", :as => :clientes
+  match "/feriados" => "diaferiados#index", :as => :feriados
+  
 
   # See how all your routes lay out with "rake routes"
 

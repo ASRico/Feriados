@@ -1,4 +1,4 @@
-<h1>Listing diaferiados</h1>
+<h1>Lista de dias feriados</h1>
 
 <table>
   <tr>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= diaferiado.dectription %></td>
     <td><%= diaferiado.fecha %></td>
-    <td><%= link_to 'Show', diaferiado %></td>
-    <td><%= link_to 'Edit', edit_diaferiado_path(diaferiado) %></td>
-    <td><%= link_to 'Destroy', diaferiado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Ver', diaferiado %></td>
+    <td><%= link_to 'Editar', edit_diaferiado_path(diaferiado) %></td>
+    <td><%= link_to 'Borrar', diaferiado, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Diaferiado', new_diaferiado_path %>
+<%= link_to 'Nuevo Diaferiado', new_diaferiado_path %>

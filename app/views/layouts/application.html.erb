@@ -2,14 +2,36 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Feria</title>
+  <title><= @titulo %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-</head>
 <body>
-
+<div id="user_nav">
+    <% if user_signed_in? %>
+        Estas identificado como <%= current_user.email %>. Desea identificarse con otra cuenta?
+        <%= link_to 'Salir', destroy_user_session_path %>
+    <% else %>
+        <%= link_to '> Registrarse', new_user_registration_path %>          <%= link_to '> Ingresar', new_user_session_path %>
+    <% end %>
+</div>
+<div id="contenido">
+	<div id="cabecera">
+		<%= @titulo %>
+	</div>
+		<div id="menu">
+		
+    <%= link_to_unless_current "Inicio", clientes_url %>
+		<%= link_to_unless_current "Dias Feriados", feriados_url %>
+    <%= link_to "Enviar Mails" %>
+    <% if user_signed_in? %>
+    <%= link_to 'Salir', destroy_user_session_path %>
+     <% end %>    
+		</div>
+</div>
+<div id="contenido_principal">
 <%= yield %>
+</div>
 
 </body>
 </html>

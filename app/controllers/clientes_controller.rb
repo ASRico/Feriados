@@ -1,7 +1,9 @@
 class ClientesController < ApplicationController
+  before_filter :authenticate_user!, :except => [:show, :index]
   # GET /clientes
   # GET /clientes.json
   def index
+    @titulo = "Lista de Clientes!"
     @clientes = Cliente.all
 
     respond_to do |format|

@@ -1,8 +1,9 @@
 class DiaferiadosController < ApplicationController
-   before_filter :authenticate_user!, :except => [:show, :index]
+  before_filter :authenticate_user!, :except => [:show, :index]
   # GET /diaferiados
   # GET /diaferiados.json
   def index
+    @titulo = "Dias Feriados!"
     @diaferiados = Diaferiado.all
 
     respond_to do |format|
