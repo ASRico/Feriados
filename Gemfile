@@ -26,7 +26,7 @@ gem 'jquery-rails'
 
 group :production do
   gem 'pg'
-  gem 'thin'
+#  gem 'thin'
 end
 
 group :development, :test do
