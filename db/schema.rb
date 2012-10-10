@@ -24,9 +24,13 @@ ActiveRecord::Schema.define(:version => 20120927014218) do
   create_table "diaferiados", :force => true do |t|
     t.text     "dectription"
     t.string   "fecha"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.integer  "user_id",     :default => 0, :null => false
   end
+
+# Could not dump table "sqlite_stat1" because of following StandardError
+#   Unknown type '' for column 'tbl'
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

@@ -23,5 +23,6 @@
 </table>
 
 <br />
-
+<% if user_signed_in? %>
 <%= link_to 'Nuevo Cliente', new_cliente_path %>
+<% end %>
