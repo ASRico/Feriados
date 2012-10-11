@@ -198,11 +198,4 @@ fieldset#body {
 input:focus {
     outline:none;
 }
-
-/*Animacion Presentacion Home */
-#cuadro {
-border-radius: 5px;
-opacity: 0.8;
-}
-
 </style>
