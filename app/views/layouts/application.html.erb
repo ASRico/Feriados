@@ -12,12 +12,12 @@
 
 <body>
 <div id="user_nav">
-    <%= if user_signed_in? %>
+    <% if user_signed_in? %>
         Hola, <%= current_user.email %>!
         <%= link_to 'Salir', destroy_user_session_path %>
-    <%= else %>
+    <% else %>
         <%= link_to '> Registrarse', new_user_registration_path %>
-    <%= end %>
+    <% end %>
 </div>
 <div id="contenido">
 	<div id="cabecera">
@@ -30,12 +30,12 @@
       <li><a href="<%=clientes_url %>" id="Clientes" data-icon="custom">Clientes</a></li>
       <li><a href="<%=feriados_url %>" id="DiasFeriados" data-icon="custom">Dias Feriados</a></li>
       <li><a href="<%=clientes_url %>" id="email" data-icon="custom">Enviar Email</a></li>
-      <%= if user_signed_in? %>
+      <% if user_signed_in? %>
       <li><a href="<%=destroy_user_session_path %>" id="Salir" data-icon="custom">Salir</a></li>
-      <%= else %>
+      <% else %>
        <li><a href="<%=new_user_session_path %>" id="Ingresar" data-icon="custom">
         Ingresar</a></li>
-      <%= end %> 
+      <% end %> 
     </ul>
     </div>
   </div>
